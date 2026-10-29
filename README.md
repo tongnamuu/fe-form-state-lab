@@ -1,0 +1,26 @@
+# Form State Lab
+
+실제 서비스 소스와 데이터 없이 새로 만든 Next.js 재현 프로젝트입니다. 가상 워크숍 티켓만 사용합니다.
+
+| 브랜치 | 실험 |
+| --- | --- |
+| `topic/01-render-gate` | 검증 전 컴포넌트 노출과 조기 요청 |
+| `topic/02-request-lifecycle` | 늦은 응답, 닫기, URL과 새로고침 |
+| `topic/03-input-contract` | Unicode 헤더, 오류 분류, 검색 입력 초기화 |
+
+각 브랜치에는 독립 실행 가능한 코드와 `ARTICLE.ko.md`가 있습니다. `/broken`과 `/fixed`를 비교하세요.
+
+```sh
+git switch topic/01-render-gate
+npm install
+npm run dev
+# http://127.0.0.1:3100
+```
+
+테스트: `npx playwright install chromium` 후 `npm test`. 운영 빌드 재현: `npm run build && npm start`.
+
+검증 버전: Node 24.13.1, Next.js 15.5.12, React 19.1.0, Playwright 1.58.2. package.json의 버전은 재현 당시 환경이며 최신 운영 버전 권장이라는 뜻은 아닙니다.
+
+`TICKET7`은 목록이 있는 티켓, `EMPTY77`은 유효하지만 목록이 빈 티켓, `NOENTRY`는 미등록 티켓입니다. 모두 공개된 학습용 값입니다. 실제 인증·권한 모델을 구현한 예제가 아니며 외부 API·DB·환경변수는 필요하지 않습니다. 개발 서버는 루프백 주소에만 바인딩합니다.
+
+비밀값, 다른 저장소의 파일·이력, 운영 데이터, node_modules 및 빌드 결과물은 배포 대상에 포함하지 않습니다.
