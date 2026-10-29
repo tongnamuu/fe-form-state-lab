@@ -14,7 +14,7 @@
 git switch topic/01-render-gate
 npm install
 npm run dev
-# http://127.0.0.1:3100
+# http://127.0.0.1:3193
 ```
 
 테스트: `npx playwright install chromium` 후 `npm test`. 운영 빌드 재현: `npm run build && npm start`.
