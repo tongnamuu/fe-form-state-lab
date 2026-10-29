@@ -4,11 +4,15 @@
 
 이번 실험은 가상의 워크숍 티켓 화면이다. 입력 수정, 닫기, 공개 목록 선택을 요청의 수명이 끝나는 사건으로 취급하고, 새로고침은 URL별로 다른 계약을 갖도록 만든다. 실제 서비스의 코드나 데이터는 사용하지 않았다.
 
+[실행 가능한 전체 예제 · topic/02-request-lifecycle](https://github.com/tongnamuu/fe-form-state-lab/tree/topic/02-request-lifecycle)
+
 ## 직접 재현하기
 
 `topic/02-request-lifecycle` 브랜치에는 수정 전후 화면과 테스트가 함께 들어 있다. 실행 환경은 Node 24.13.1, Next.js 15.5.12, React 19.1.0, Playwright 1.58.2다.
 
 ```sh
+git clone https://github.com/tongnamuu/fe-form-state-lab.git
+cd fe-form-state-lab
 git switch topic/02-request-lifecycle
 npm install
 npm run dev

@@ -11,6 +11,8 @@
 각 브랜치에는 독립 실행 가능한 코드와 `ARTICLE.ko.md`가 있습니다. `/broken`과 `/fixed`를 비교하세요.
 
 ```sh
+git clone https://github.com/tongnamuu/fe-form-state-lab.git
+cd fe-form-state-lab
 git switch topic/01-render-gate
 npm install
 npm run dev
@@ -24,3 +26,13 @@ npm run dev
 `TICKET7`은 목록이 있는 티켓, `EMPTY77`은 유효하지만 목록이 빈 티켓, `NOENTRY`는 미등록 티켓입니다. 모두 공개된 학습용 값입니다. 실제 인증·권한 모델을 구현한 예제가 아니며 외부 API·DB·환경변수는 필요하지 않습니다. 개발 서버는 루프백 주소에만 바인딩합니다.
 
 비밀값, 다른 저장소의 파일·이력, 운영 데이터, node_modules 및 빌드 결과물은 배포 대상에 포함하지 않습니다.
+
+## 검증 결과
+
+- `topic/01-render-gate`: Playwright 5개 통과, production build 통과.
+- `topic/02-request-lifecycle`: Playwright 9개 통과, production build 통과.
+- `topic/03-input-contract`: Playwright 17개 통과, production build 통과.
+
+각 테스트에는 의도적으로 잘못된 동작을 관찰하는 `/broken` 검사와 수정된 `/fixed` 검사가 함께 포함됩니다. 테스트가 통과한다는 말이 `/broken` 화면이 올바르다는 뜻은 아닙니다.
+
+직접 의존성 버전은 고정했지만 lockfile은 포함하지 않았습니다. 전이 의존성까지 동일한 바이트로 재현하는 환경은 아니며, 브라우저별 오류 문구도 달라질 수 있습니다.
