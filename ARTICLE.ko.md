@@ -4,11 +4,15 @@
 
 이 글은 가상의 워크숍 티켓으로 그 차이를 재현한다. 같은 화면 아래에는 검색 입력과 실제 적용된 검색 조건이 어긋나는 별도 실험을 넣었다. 실제 서비스 코드와 데이터는 사용하지 않았다.
 
+[실행 가능한 전체 예제 · topic/03-input-contract](https://github.com/tongnamuu/fe-form-state-lab/tree/topic/03-input-contract)
+
 ## 실행과 비교
 
 프로젝트의 `topic/03-input-contract` 브랜치를 사용한다. Node 24.13.1, Next.js 15.5.12, React 19.1.0, Playwright 1.58.2에서 검증했다.
 
 ```sh
+git clone https://github.com/tongnamuu/fe-form-state-lab.git
+cd fe-form-state-lab
 git switch topic/03-input-contract
 npm install
 npm run dev
