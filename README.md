@@ -36,3 +36,9 @@ npm run dev
 각 테스트에는 의도적으로 잘못된 동작을 관찰하는 `/broken` 검사와 수정된 `/fixed` 검사가 함께 포함됩니다. 테스트가 통과한다는 말이 `/broken` 화면이 올바르다는 뜻은 아닙니다.
 
 직접 의존성 버전은 고정했지만 lockfile은 포함하지 않았습니다. 전이 의존성까지 동일한 바이트로 재현하는 환경은 아니며, 브라우저별 오류 문구도 달라질 수 있습니다.
+
+## 읽을거리
+
+1. [Next.js 폼 검증 중 목록이 잠깐 보이는 이유](https://concretecode.dev/post/6) — [실험 브랜치](https://github.com/tongnamuu/fe-form-state-lab/tree/topic/01-render-gate)
+2. [닫은 모달이 늦은 응답으로 다시 움직일 때](https://concretecode.dev/post/7) — [실험 브랜치](https://github.com/tongnamuu/fe-form-state-lab/tree/topic/02-request-lifecycle)
+3. [한글 입력이 fetch를 깨뜨릴 때](https://concretecode.dev/post/8) — [실험 브랜치](https://github.com/tongnamuu/fe-form-state-lab/tree/topic/03-input-contract)
