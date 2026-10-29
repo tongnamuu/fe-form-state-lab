@@ -4,11 +4,15 @@
 
 이 글에서는 실제 서비스와 무관하게 새로 만든 가상의 워크숍 예약 화면으로 문제를 재현한다. 예제의 티켓과 워크숍은 모두 공개된 학습용 데이터다.
 
+[실행 가능한 전체 예제 · topic/01-render-gate](https://github.com/tongnamuu/fe-form-state-lab/tree/topic/01-render-gate)
+
 ## 재현 환경과 순서
 
 프로젝트의 `topic/01-render-gate` 브랜치를 사용한다. Node 24.13.1, Next.js 15.5.12, React 19.1.0, Playwright 1.58.2에서 확인했다. 버전은 실험 환경을 고정하기 위한 정보다.
 
 ```sh
+git clone https://github.com/tongnamuu/fe-form-state-lab.git
+cd fe-form-state-lab
 git switch topic/01-render-gate
 npm install
 npm run dev
